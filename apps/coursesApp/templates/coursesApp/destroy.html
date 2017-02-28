@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete</title>
+    <meta name = "description" content = "You can use this page to delete fictitious courses.">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "coursesApp/css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "coursesApp/css/skeleton.css" %}">
+    <link rel="stylesheet" href="{% static "coursesApp/css/destroy.css" %}">
+  </head>
+    <body>
+      <div class = wrapper>
+      <h4>Are you sure you want to delete the following course?</h4>
+      <p>Name: {{Course.name}}</p>
+      <p>Description: {{Course.description}}</p>
+      <form action = "/" method = "post">
+        {% csrf_token %}
+        <input id = "no" type = "submit" value = "No">
+      </form>
+      <form action = "/remove/{{Course.id}}" method = "post">
+        {% csrf_token %}
+        <input id = "yes" type = "submit" value = "Yes! I want to delete this">
+      </form>
+    </div>
+  </body>
+</html>

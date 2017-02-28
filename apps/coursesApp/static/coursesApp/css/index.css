@@ -1,0 +1,31 @@
+.wrapper{
+  padding: 20px;
+}
+input.add {
+  color: white;
+  background-color: green;
+}
+input.remove {
+  color: white;
+  background-color: orange;
+}
+h2{
+  color: blue;
+}
+.name{
+  width: 500px;
+}
+.description{
+  height: 50px;
+  width: 500px;
+  display: block;
+}
+.course_titles{
+  margin-top: 100px;
+}
+.remove{
+  margin-top: 40px;
+}
+table{
+  width: 1000px;
+}
